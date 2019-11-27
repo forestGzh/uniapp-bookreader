@@ -3,7 +3,7 @@
         {
             "path": "pages/booklist/booklist",
             "style": {
-                "navigationBarTitleText": "booklist"
+                "navigationBarTitleText": "小说列表"
             }
         }, {
             "path": "pages/page1/page1",
@@ -26,13 +26,13 @@
         {
             "path": "pages/chapters/chapters",
             "style": {
-                "navigationBarTitleText": "chapters"
+                "navigationBarTitleText": "章节列表"
             }
         },
         {
-            "path":"pages/chapter-content/chapter-content",
-            "style":{
-                "navigationBarTitleText":"chapter-content"
+            "path": "pages/chapter-content/chapter-content",
+            "style": {
+                "navigationBarTitleText": "chapter-content"
             }
         }
     ],
@@ -48,16 +48,20 @@
         "borderStyle": "black",
         "backgroundColor": "#F8F8F8",
         "list": [{
-                "pagePath": "pages/index/index",
-                "text": "index"
-            },
-            {
-                "pagePath": "pages/page1/page1",
-                "text": "page1"
-            }, {
-                "pagePath": "pages/page2/page2",
-                "text": "page2"
-            }
-        ]
+            "pagePath": "pages/page1/page1",
+            "iconPath": "static/template.png",
+            "selectedIconPath": "static/templateHL.png",
+            "text": "page1"
+        }, {
+            "pagePath": "pages/booklist/booklist",
+            "iconPath": "static/template.png",
+            "selectedIconPath": "static/templateHL.png",
+            "text": "books"
+        }, {
+            "pagePath": "pages/page2/page2",
+            "iconPath": "static/template.png",
+            "selectedIconPath": "static/templateHL.png",
+            "text": "page2"
+        }]
     }
 }

@@ -5,7 +5,7 @@
                 {{book.bookName}}
             </navigator>
         </view>
-        <button @click="sendRequest">发起请求</button>
+        <button @click="sendRequest">获取列表</button>
     </view>
 </template>
 
@@ -16,11 +16,13 @@
     export default {
         data() {
             return {
-                books: [{
-                    "bookName": "1",
-                    "bookHref": "/book/14733.html",
-                    "chapters": null
-                }]
+                books: [
+                //     {
+                //     "bookName": "1",
+                //     "bookHref": "/book/14733.html",
+                //     "chapters": null
+                // }
+                ]
             }
         },
         onLoad() {
@@ -39,7 +41,7 @@
                     }
                 }).then(res => {
                     console.log('request success', res[1]);
-                    this.books = res[1].data.slice(0,10);
+                    this.books = res[1].data;
                     console.log('data', this.books);
                 }).catch(err => {
                     console.log('request fail', err);

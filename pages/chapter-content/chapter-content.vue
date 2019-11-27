@@ -1,6 +1,9 @@
 <template>
     <view>
-        <rich-text :nodes="chapterContent"></rich-text>
+        <!-- <rich-text :nodes="chapterContent"></rich-text> -->
+        <scroll-view class="content">
+            <text>{{chapterContent}}<text>
+        </scroll-view>
         <view>
             <button @click="nextChapter">下一章</button>
         </view>
@@ -15,8 +18,9 @@
         data() {
             return {
                 chapters: [], //章节列表
-                chapterHref: '', //章节链接
                 chapterIndex: 0, //当前章节顺序
+
+                chapterHref: '', //章节链接
                 chapterContent: '', //章节内容
             }
         },
@@ -24,7 +28,6 @@
             this.chapterHref = option.chapterHref;
             this.chapterIndex = option.chapterIndex;
             this.getChapterContent(option.chapterHref);
-            this.getChapters();
         },
         onShow() {
             this.getChapters();
@@ -76,21 +79,14 @@
                 }).catch(err => {
                     console.log('request fail', err);
                 });
-            },
-            goTop: function(e) {
-                this.scrollTop = this.old.scrollTop
-                this.$nextTick(function() {
-                    this.scrollTop = 0
-                });
-                uni.showToast({
-                    icon: "none",
-                    title: "纵向滚动 scrollTop 值已被修改为 0"
-                })
             }
         }
     }
 </script>
 
 <style>
-
+    .content {
+        width: 94vw;
+        margin: 3vw;
+    }
 </style>
