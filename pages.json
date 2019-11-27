@@ -1,0 +1,63 @@
+{
+    "pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+        {
+            "path": "pages/booklist/booklist",
+            "style": {
+                "navigationBarTitleText": "booklist"
+            }
+        }, {
+            "path": "pages/page1/page1",
+            "style": {
+                "navigationBarTitleText": "page1"
+            }
+        },
+        {
+            "path": "pages/index/index",
+            "style": {
+                "navigationBarTitleText": "index"
+            }
+        },
+        {
+            "path": "pages/page2/page2",
+            "style": {
+                "navigationBarTitleText": "page2"
+            }
+        },
+        {
+            "path": "pages/chapters/chapters",
+            "style": {
+                "navigationBarTitleText": "chapters"
+            }
+        },
+        {
+            "path":"pages/chapter-content/chapter-content",
+            "style":{
+                "navigationBarTitleText":"chapter-content"
+            }
+        }
+    ],
+    "globalStyle": {
+        "navigationBarTextStyle": "black",
+        "navigationBarTitleText": "uni-app",
+        "navigationBarBackgroundColor": "#F8F8F8",
+        "backgroundColor": "#F8F8F8"
+    },
+    "tabBar": {
+        "color": "#7A7E83",
+        "selectedColor": "#007AFF",
+        "borderStyle": "black",
+        "backgroundColor": "#F8F8F8",
+        "list": [{
+                "pagePath": "pages/index/index",
+                "text": "index"
+            },
+            {
+                "pagePath": "pages/page1/page1",
+                "text": "page1"
+            }, {
+                "pagePath": "pages/page2/page2",
+                "text": "page2"
+            }
+        ]
+    }
+}
